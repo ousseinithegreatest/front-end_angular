@@ -1,0 +1,31 @@
+<div class="container" id="main-container">
+  <div class="col-md-6 ">
+    <form #addForm="ngForm" (ngSubmit)="register(addForm.value)">
+      <div class="form-group">
+        <label for="name">FisrtName</label>
+        <input type="text" ngModel name="firstname" class="form-control" id="firstname" placeholder="fisrtName" required>
+      </div>
+      <div class="form-group">
+        <label for="email">LastName</label>
+        <input type="text" ngModel name="lastname" class="form-control" id="lastname" placeholder="lastname" required>
+      </div>
+      <div class="form-group">
+        <label for="phone">Username</label>
+        <input type="text" ngModel name="username" class="form-control" id="username" placeholder="username" required>
+      </div>
+      <div class="form-group">
+        <label for="phone">Email</label>
+        <input type="text" ngModel name="email" class="form-control" id="email" placeholder="email" required>
+      </div>
+      <div class="form-group">
+        <label for="phone">Password</label>
+        <input type="password" ngModel name="password" class="form-control" id="password" placeholder="password" required>
+      </div>
+
+      <div class="modal-footer">
+        <button [disabled]="addForm.invalid" type="submit" class="btn btn-primary" >Save</button>
+      </div>
+      </form>
+  </div>
+
+</div>
